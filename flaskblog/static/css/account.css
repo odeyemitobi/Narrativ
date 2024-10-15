@@ -1,0 +1,188 @@
+
+/* Section containing the account-related content */
+header {
+  margin-bottom: 0;
+}
+
+/* remove the account buttton, cause we already in the account page. */
+.user-action li:nth-child(2) {
+  display: none;
+}
+
+.account-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1.8px solid black;
+}
+
+/* Section containing the profile information */
+.profile-section {
+  width: 50%;
+  min-width: 700px;
+  padding: 4rem 0 4rem 2rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+
+.account-info {
+  font-family: "Times New Roman", Times, serif;
+
+  border-bottom: 1.8px solid black;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+  width: 80%;
+}
+
+/* Div containing the profile picture and text */
+.profile-info {
+  display: flex;
+  margin-bottom: 3rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-picture {
+  width: 150px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* margin-left: -50px; */ ;
+}
+
+.profile-picture img {
+  max-width: 100%;
+  clip-path: circle();
+}
+
+/* Div containing the username and email */
+.profile-text{
+  /* background: yellow; */
+  margin-bottom: 2rem;
+}
+.profile-text h2 {
+  /* margin: 3rem 0 0 -8rem; */
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+.profile-text p {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+/* Labels in the form */
+label {
+  font-size: 1.3rem;
+  display: block;
+}
+
+/* Input fields in the form */
+input {
+  width: 80%;
+  padding: 0.7rem 0.7rem;
+  margin-bottom: 2rem;
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+  border-bottom: 1.8px dashed black;
+
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.file-input {
+  padding: 0;
+}
+
+
+/* Submit button in the form */
+.update-btn {
+  border: none;
+  font-size: 1.4rem;
+  background: green;
+  color: white;
+  /* width: 25%; */
+  width: 175px;
+  /* align-self: flex-start; */
+
+  padding: 1.3rem 3rem;
+  border-radius: 5px;
+  margin-top: 2rem;
+  cursor: pointer;
+  /* margin-bottom: 5rem; */
+}
+
+#input-border-error {
+  border: 1px solid red;
+  outline: none;
+}
+
+.form-error-message {
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  margin-left: 0.3rem;
+}
+
+.upload-picture {
+  margin-bottom: 4rem;
+}
+
+.upload-picture input:hover {
+  cursor: pointer;
+}
+
+#profile-pic {
+  cursor: pointer;
+}
+
+.feedback {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.feedback--success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+.feedback i {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+/* TABLET DEVICES */
+@media screen and (max-width: 720px) {
+  .profile-section {
+    width: 80%;
+    min-width: 500px;
+  }
+}
+
+
+/* MOBILE DEVICES */
+@media screen and (max-width: 565px) {
+  .profile-section {
+    min-width: 0px;
+    width: 90%;
+  }
+
+  .profile-info {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-height: 568px) {
+  .update-btn {
+    width: 120px;
+  }
+
+}
