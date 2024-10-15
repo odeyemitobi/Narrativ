@@ -1,0 +1,682 @@
+@import url("feedback.css");
+@import url("reset.css");
+@import url("footer.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap');
+
+.mobile-handburger {
+  display: none;
+}
+
+/* HEADER */
+header {
+  margin-bottom: 0;
+}
+
+/* BODY */
+body {
+  background: #f4f4f1;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.category-not-found {
+  font-family: 'Arial', sans-serif; 
+  font-size: 2rem;  
+  color: #333333;  
+  text-align: center; 
+  margin-top: -50px;  
+  margin-bottom: 20px;  
+  letter-spacing: 1px;  
+  text-transform: uppercase;  
+  border-bottom: 2px solid #E50914;  
+  padding-bottom: 10px;  
+}
+
+
+
+body::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+}
+
+body.modal-active::before {
+  display: block;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  display: none;
+  background-color: #f5f5f5;
+}
+
+header {
+  /* margin-bottom: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+.base-nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 2rem 0;
+  width: 80%;
+  /* height: 100%; */
+  align-items: center;
+  color: #ccc;
+  /* background: green; */
+}
+
+.user-action {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.base-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  color: #635e5e;
+}
+
+.menu-list u li {
+  font-size: 4rem;
+}
+
+.menu-list a {
+  font-size: 2rem;
+}
+
+/* HOME SECTION */
+.home-section {
+  flex: 1;
+  min-height: 80vh;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: 2rem auto;
+  align-self: flex-end;
+}
+
+.home-article {
+  width: 60%;
+}
+
+.home-main {
+  border: 20px solid #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  color: black;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-main-div {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  margin: 1rem 0 2rem 0;
+  position: relative;
+}
+
+.home-main-div h4 {
+  font-size: 2rem;
+  letter-spacing: 1.3px;
+  color: #635e5e;
+}
+
+.home-main-div p {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #696969;
+}
+
+.post-div {
+  font-weight: bolder;
+  font-size: 1rem;
+  color: rgb(7, 4, 4);
+  padding: 1rem 0;
+}
+
+.new-post {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+.new-post p {
+  color: green;
+}
+
+.post-div h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.post-div p {
+  font-size: 1.4rem;
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.9;
+}
+
+/* ASIDE BAR */
+.aside-content {
+  order: 2;
+  padding: 1rem;
+  color: black;
+  border: 1px solid #ccc;
+  width: 36%;
+  align-self: flex-start;
+  border: 20px solid #eee;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+}
+
+.aside-content p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: black;
+  color: #635e5e;
+
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border-bottom: 2px solid #696969;
+}
+
+.post-recommendation p {
+  border-bottom: 2px solid #696969;
+}
+
+.aside-content h1 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.categories {
+  margin-bottom: 2rem;
+}
+
+.add-more {
+  margin-top: 2rem;
+  border: none;
+  background: rgb(56, 117, 117);
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  color: white;
+}
+
+.latest-post.latest-post {
+  margin-bottom: 2rem;
+}
+
+/* CALL TO ACTION */
+.cta {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta a {
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.edit-btn {
+  border: none;
+  background: rgb(56, 117, 117);
+  padding: 0.6rem 2rem;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.edit-btn a {
+  color: white;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.edit-btn:hover {
+  background: rgb(46, 97, 97);
+  transform: scale(1.05);
+}
+
+.delete-btn {
+  color: red;
+  background: black;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 2rem;
+  border-radius: 40px;
+  letter-spacing: 2px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.delete-btn a {
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.delete-btn:hover {
+  background: rgb(30, 30, 30);
+  transform: scale(1.05);
+}
+
+.add-more:hover {
+  background: #0056b3;
+  color: #e0e0e0;
+}
+
+.aside-content p:hover {
+  color: #007bff;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.aside-content p:hover i {
+  color: #007bff;
+}
+
+/* DELETE MODAL */
+.delete-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 600px;
+  min-width: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000000;
+}
+
+.delete-modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-title h2 {
+  font-size: 1.6rem;
+}
+
+.delete-modal p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.delete-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.delete-cta button {
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.confirm-delete-btn {
+  background: red;
+  color: white;
+  border: none;
+}
+
+.confirm-delete-btn:hover {
+  background: darkred;
+}
+
+.cancel-delete-modal {
+  background: none;
+  border: 2px solid #ccc;
+  color: black;
+}
+
+.cancel-delete-modal:hover {
+  background: #eee;
+}
+
+.cancel-delete-icon {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* DELETE MODAL */
+/* .delete-modal {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 40%;
+  min-width: 450px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.delete-modal-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.delete-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-title h2 {
+  font-size: 2rem;
+}
+
+.delete-modal p {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+.delete-cta {
+  align-self: flex-end;
+  margin-top: 2rem;
+}
+
+.delete-cta a {
+  text-decoration: none;
+  background: red;
+  font-size: 1.4rem;
+  padding: 1rem 1.4rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  color: white;
+}
+
+.delete-cta button {
+  font-size: 1.4rem;
+  padding: 1rem 1.4rem;
+  border-radius: 5px;
+  border: 2px solid #eee;
+}
+
+.delete-cta a:hover {
+  cursor: pointer;
+  background: rgba(224, 69, 69, 0.502);
+}
+
+.delete-cta button:hover {
+  cursor: pointer;
+}
+
+.confirm-delete-btn {
+  background: red;
+}
+  */
+.hide-modal {
+  display: none;
+}
+
+/* 
+.cancel-delete-icon {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.link-btn {
+  font-size: 1.4rem;
+  border: 1px solid aqua;
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  color: black;
+}
+
+.link-btn-active {
+  background: aqua;
+  color: white;
+}  */
+
+/* delete modal */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 565px) {
+  .header {
+    /* background: red; */
+    position: relative;
+  }
+
+  .base-nav {
+    /* background: blue; */
+  }
+
+  /* mobile handburger */
+  .user-action {
+    /* display: none; */
+    position: absolute;
+    top: 78px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    background: white;
+    z-index: 9999;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .hide-dropdown {
+    display: none;
+  }
+
+  .mobile-handburger {
+    display: block;
+    cursor: pointer;
+    font-size: 3rem;
+  }
+
+  .base-nav {
+    /* background: blue; */
+    width: 90%;
+  }
+
+  .aside-content {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    color: white;
+    overflow: auto;
+    margin-bottom: 2rem;
+    background: #eee;
+    padding: 2.5rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    display: none;
+    background-color: #f5f5f5;
+  }
+
+  .home-section {
+    min-height: 580px;
+  }
+
+  .home-container {
+    flex-direction: column-reverse;
+    margin: 0;
+    width: 100%;
+  }
+
+  .aside-content p {
+    color: white;
+  }
+
+  .aside-content h2 {
+    color: black;
+  }
+
+  .aside-content .for-you {
+    display: none;
+  }
+
+  .add-more {
+    display: none;
+  }
+
+  .aside-content p {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #635e5e;
+
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    display: flex;
+    margin-right: 1rem;
+    white-space: nowrap;
+    border: none;
+  }
+
+  .aside-content p:hover {
+    color: #007bff;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .aside-content h2 {
+    display: none;
+  }
+
+  .post-recommendation {
+    display: flex;
+  }
+
+  .home-main {
+    width: 100%;
+  }
+
+  .home-article {
+    width: 100%;
+  }
+
+  /* aside content */
+
+  .aside-content {
+    color: black;
+  }
+
+  .home-main-div h4 {
+    font-size: 1.4rem;
+  }
+
+  .home-main-div p {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  .post-div {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(7, 4, 4);
+    padding: 1rem 0;
+  }
+
+  .new-post p {
+    color: black;
+  }
+
+  .post-div h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+
+  .post-div p {
+    font-size: 1.3rem;
+    text-align: justify;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 1.9;
+  }
+
+  .edit-btn a {
+    font-size: 1rem;
+  }
+
+  .delete-btn a {
+    font-size: 1rem;
+  }
+
+  /*  im testing it in the mobile version */
+  .user-action.user-action > li a:active,
+  .user-action.user-action > li a:focus {
+    color: #007bff;
+    background: #f0f0f0;
+    cursor: pointer;
+  }
+
+  .user-action.user-action > li {
+    padding: 0.6rem 0;
+    /* width: 100%; */
+  }
+
+  .user-action.user-action > li a {
+    padding: 2rem;
+  }
+
+  .delete-modal {
+    width: 80%;
+  }
+
+
+  .category-not-found {
+    margin: 50px;
+  }
+}
+
+/* i {
+  pointer-events: none;
+} */
+/* for debugging still not working */
