@@ -1,0 +1,10 @@
+@import url("post.css");
+@import url("feedback.css");
+
+.publish {
+  background: #333;
+}
+
+.publish.not-allowed {
+  cursor: not-allowed;
+}

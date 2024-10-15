@@ -1,0 +1,28 @@
+
+.feedback {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  visibility: hidden;
+}
+
+.feedback--success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+
+}
+
+.feedback--error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.feedback i {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
