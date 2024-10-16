@@ -14,7 +14,7 @@ header {
 
 /* BODY */
 body {
-  background: #f4f4f1;
+  background: #F0F9ED;
   height: 100vh;
   font-family: 'Inter', sans-serif;
 }
@@ -96,6 +96,17 @@ header {
 
 .menu-list a {
   font-size: 2rem;
+  color: #15910C;
+  font-weight: 700;
+}
+
+.signin-style a{
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  padding: 12px;
+  background: #407540;
+  border-radius: 30px;
 }
 
 /* HOME SECTION */

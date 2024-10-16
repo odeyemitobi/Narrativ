@@ -86,11 +86,6 @@ body {
   margin: 0 auto;
 }
 
-.nav__left li a,
-.nav__right li a {
-  color: #635e5e;
-}
-
 .nav__left li {
   font-size: 1.3rem;
   color: #635e5e;
@@ -99,6 +94,21 @@ body {
 .nav__right {
   display: flex;
   gap: 2rem;
+}
+
+.menu-list a {
+  font-size: 2rem;
+  color: #15910C;
+  font-weight: 700;
+}
+
+.signin-style a{
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  padding: 12px;
+  background: #407540;
+  border-radius: 30px;
 }
 
 section {

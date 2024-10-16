@@ -10,31 +10,29 @@
 
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-..."
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
   <body>
     <header class="header">
       <div class="nav">
         <div class="nav__left">
-          <ul>
+          <ul class="menu-list">
             <li>
               <a href="{{ url_for('main.index_page') }}">
-                NARRATIV <i class="fas fa-book"></i>
+                NARRATIV <i class="fa-brands fa-blogger-b"></i>
               </a>
             </li>
           </ul>
         </div>
 
         <div class="nav__right">
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('users.login_page') }}">
               <i class="fas fa-sign-in-alt"></i> Sign in
             </a>
           </li>
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('users.register_page') }}">
               <i class="fas fa-user-plus"></i> Sign up
             </a>

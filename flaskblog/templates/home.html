@@ -33,18 +33,18 @@
         <ul class="user-action hide-dropdown">
           <!-- display only when the current user is signed in -->
           {% if current_user.is_authenticated %}
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('posts.create_post') }}">
               <i class="fas fa-pencil-alt"></i> New Post
             </a>
           </li>
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('users.account_page') }}">
               <i class="fas fa-user"></i> Profile
             </a>
           </li>
 
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('users.logout') }}">
               <i class="fas fa-sign-out-alt"></i> Logout
             </a>
@@ -52,12 +52,12 @@
 
           {% else %}
           <!-- display only when the user is signed out -->
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('users.login_page') }}">
               <i class="fas fa-sign-in-alt"></i> Sign in
             </a>
           </li>
-          <li>
+          <li class="signin-style">
             <a href="{{ url_for('users.register_page') }}">
               <i class="fas fa-user-plus"></i> Sign up
             </a>
