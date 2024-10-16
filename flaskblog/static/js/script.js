@@ -25,8 +25,6 @@
 //     });
 // }
 
-
-
 //  Delete post logic
 // function deletePost() {
 //     let revelDeleteModal = document.querySelectorAll('.delete-btn')
@@ -58,21 +56,19 @@
 
 // }
 
+// // Function call
+// cance l FlashMessage();
+// deletePost();
+// cancelModal();
 
-
-    // // Function call 
-        // cance l FlashMessage();   
-            // deletePost();   
-                // cancelModal();   
-                           
 // i wanna import signup.js
-import './signup.js'
-import './signin.js'
-import './home.js'
+import "./signup.js";
+import "./signin.js";
+import "./home.js";
 
 class Footer extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
             <footer class="footer">
                 <div class="footer-content">
                     <p>&copy; 2024 Narrativ. All rights reserved.</p>
@@ -83,48 +79,35 @@ class Footer extends HTMLElement {
                         <a href="https://github.com/odeyemitobi/Narrativ" target="_blank" class="social-link" aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/kelvin-o-282354293/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/oluwadamilola-owolabi/ target="_blank" class="social-link" aria-label="LinkedIn">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
                 </div>
             </footer>
         `;
-    }
+  }
 }
-
-
-
 
 // Define the new custom element
 customElements.define("custom-footer", Footer);
 
-
-
-const mobileMenu = document.querySelector('.mobile-handburger')
-const dropdown = document.querySelector('.user-action')
-
+const mobileMenu = document.querySelector(".mobile-handburger");
+const dropdown = document.querySelector(".user-action");
 
 if (mobileMenu) {
-
-    mobileMenu.addEventListener('click', () => {
-        console.log('just clicked')
-        dropdown.classList.toggle('hide-dropdown')
-    })
+  mobileMenu.addEventListener("click", () => {
+    console.log("just clicked");
+    dropdown.classList.toggle("hide-dropdown");
+  });
 }
 
+window.addEventListener("click", (e) => {
+  if (!e.target.classList.contains("fas"))
+    if (dropdown) dropdown.classList.add("hide-dropdown");
+});
 
-window.addEventListener('click', (e) => {
-    if (!e.target.classList.contains('fas'))
-        if (dropdown)
-            dropdown.classList.add('hide-dropdown')
-})
-
-
-
-window.addEventListener('scroll', () => {
-
-
-    if (window.scrollY > 10 && !dropdown.classList.contains('hide-dropown'))
-        dropdown.classList.add('hide-dropdown')
-})
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10 && !dropdown.classList.contains("hide-dropown"))
+    dropdown.classList.add("hide-dropdown");
+});
